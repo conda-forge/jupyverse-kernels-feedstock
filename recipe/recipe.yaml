@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.1"
+  version: "0.1.2"
 
 package:
   name: jupyverse-kernels
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/j/jupyverse-kernels/jupyverse_kernels-${{ version }}.tar.gz
-    sha256: f044769557cd14939363ed85a9016033b371a5c560c07c1423ffe445392e7223
+    sha256: 174a0a0995f8d55e17c1712c41dcbdd93ee38078d9385e6939d24666d60fb4a1
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv-build
+    - uv-build >=0.11.32,<0.12
   run:
     - python >=${{ python_min }}
     - fastapi-core
